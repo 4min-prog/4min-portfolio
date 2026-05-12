@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronDown, GraduationCap } from 'lucide-react';
+import { ArrowRight, ChevronDown, GraduationCap, FileDown } from 'lucide-react';
 import { Language } from '../translations';
 import ParticleBackground from './ParticleBackground';
 
@@ -91,6 +91,15 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
             >
               {t.explore} <ArrowRight className={`ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 w-6 h-6`} />
             </button>
+            
+            <a 
+              href="/cv.pdf"
+              download="CV.pdf"
+              className="inline-flex items-center px-10 py-4 rounded-2xl bg-teal-600 text-white font-black shadow-xl shadow-teal-600/20 hover:bg-teal-700 hover:shadow-teal-600/40 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer"
+            >
+              <FileDown className="mr-2 rtl:ml-2 rtl:mr-0 w-6 h-6" /> {t.downloadCV || 'Download CV'}
+            </a>
+
             <button 
               onClick={(e) => scrollToSection(e, 'contact')}
               className="inline-flex items-center px-10 py-4 rounded-2xl border-2 border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white font-black hover:bg-gray-50 dark:hover:bg-gray-900 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer"

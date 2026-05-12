@@ -10,7 +10,8 @@ export const translations = {
       roles: ['Student Developer', 'UI/UX Enthusiast', 'Web Apprentice', 'Creative Builder'],
       desc: 'I am a dedicated student developer blending professional programming studies with real-world project experience.',
       explore: 'Explore Projects',
-      touch: 'Get In Touch'
+      touch: 'Get In Touch',
+      downloadCV: 'Download CV'
     },
     skills: {
       title: 'Skills & Technologies',
@@ -110,7 +111,8 @@ export const translations = {
       roles: ['Öğrenci Geliştirici', 'UI/UX Meraklısı', 'Web Çırağı', 'Yaratıcı Oluşturucu'],
       desc: 'Bilgisayar programcılığı eğitimini gerçek dünya proje deneyimiyle harmanlayan, kendini işine adamış bir öğrenci geliştiriciyim.',
       explore: 'Projeleri Keşfet',
-      touch: 'İletişime Geç'
+      touch: 'İletişime Geç',
+      downloadCV: 'CV İndir'
     },
     skills: {
       title: 'Yetenekler ve Teknolojiler',
@@ -210,7 +212,8 @@ export const translations = {
       roles: ['مطور طالب', 'محب لتجربة المستخدم', 'متدرب ويب', 'مبدع'],
       desc: 'أنا مطور طالب مكرس يجمع بين دراسة البرمجة وخبرة المشاريع الواقعية.',
       explore: 'استكشاف المشاريع',
-      touch: 'تواصل معي'
+      touch: 'تواصل معي',
+      downloadCV: 'تحميل السيرة الذاتية'
     },
     skills: {
       title: 'المهارات والتقنيات',
