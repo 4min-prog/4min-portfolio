@@ -82,7 +82,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
                 </div>
                 <div>
                   <p className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-1">{t.email}</p>
-                  <p className="text-xl font-bold break-all">aminomr224@gmail.com</p>
+                  <p className="text-xl font-bold break-all">eminelomerr@gmail.com</p>
                 </div>
               </div>
               
