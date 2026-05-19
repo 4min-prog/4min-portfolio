@@ -54,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
         title: pt.transfer?.title || 'Money Transfer Tracking',
         category: t.cat?.transfer || 'Web Application',
         description: pt.transfer?.desc || 'A comprehensive system to track and manage money transfers securely.',
-        link: 'https://hawalee.ct.ws/',
+        link: 'http://hawalee.great-site.net/',
         github: '#',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80',
         status: pt.transfer?.status || 'Live',
