@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heart, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Heart, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { Language } from '../translations';
 
 interface FooterProps {
@@ -24,6 +24,7 @@ const Footer: React.FC<FooterProps> = ({ t, lang }) => {
     { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/amin_line' },
     { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/x.4min/' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/muhammed-emin-elomer-1031bb334/' },
+    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/4min-prog' },
   ];
 
   return (

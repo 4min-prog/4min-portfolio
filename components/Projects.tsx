@@ -86,7 +86,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
         title: pt.seyhomer?.title || 'Şeyh Ömer Camii',
         category: t.cat?.seyhomer || 'Web Application',
         description: pt.seyhomer?.desc || 'A modern, multilingual website for the historical Şeyh Ömer Mosque in Gaziantep.',
-        link: 'https://seyhomer.ct.ws/',
+        link: 'https://seyhomer.rf.gd/',
         github: '#',
         image: '/projects/seyhomer.png',
         status: 'Live',

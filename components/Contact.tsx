@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, CheckCircle2, Loader2, AlertCircle, Github } from 'lucide-react';
 
 interface ContactProps {
   t: any;
@@ -53,6 +53,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
     { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/amin_line' },
     { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/x.4min/' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/muhammed-emin-elomer-1031bb334/' },
+    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/4min-prog' },
   ];
 
   return (
