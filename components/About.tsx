@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { User, Laptop, Code2, GraduationCap } from 'lucide-react';
+import { User, Laptop, Code2, Terminal } from 'lucide-react';
 import { Language } from '../translations';
 
 interface AboutProps {
@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
   ];
 
   const icons = [
-    <GraduationCap className="w-6 h-6" />,
+    <Terminal className="w-6 h-6" />,
     <Laptop className="w-6 h-6" />,
     <Code2 className="w-6 h-6" />,
     <User className="w-6 h-6" />
@@ -37,7 +37,7 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
             <div className="relative z-10 bg-white dark:bg-gray-800 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-700 aspect-[3/4] sm:aspect-[4/5]">
               <img
                 src="/image/my.jpg"
-                alt="4min — Student Developer"
+                alt="4min — Web Developer"
                 loading="lazy"
                 width={420}
                 height={560}

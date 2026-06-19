@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ t, lang }) => {
     { icon: <Facebook className="w-5 h-5" />, href: 'https://www.facebook.com/profile.php?id=100029730670833' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/amin_line' },
     { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/x.4min/' },
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/muhammed-emin-elomer-1031bb334/' },
+    { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/4min/' },
     { icon: <Github className="w-5 h-5" />, href: 'https://github.com/4min-prog' },
   ];
 

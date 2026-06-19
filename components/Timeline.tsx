@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { GraduationCap, Code2, Gamepad2, Wrench, Rocket, Star } from 'lucide-react';
+import { Code2, Gamepad2, Wrench, Rocket, Star, Award, GraduationCap } from 'lucide-react';
 
 interface TimelineProps {
   t: any;
@@ -30,6 +30,12 @@ const timelineItems = [
     icon: <Wrench className="w-5 h-5" />,
     color: 'emerald',
     key: 'tools'
+  },
+  {
+    year: '2026',
+    icon: <GraduationCap className="w-5 h-5" />,
+    color: 'indigo',
+    key: 'grad'
   },
   {
     year: '2026',

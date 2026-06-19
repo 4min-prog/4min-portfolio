@@ -17,9 +17,28 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
     message: ''
   });
 
+  const sanitize = (str: string) => str.replace(/<[^>]*>/g, '').replace(/[<>]/g, '').trim();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
+
+    const payload = {
+      name: sanitize(formState.name),
+      email: formState.email.trim().toLowerCase(),
+      subject: sanitize(formState.subject),
+      message: sanitize(formState.message),
+    };
+
+    if (!payload.name || !payload.email || !payload.message) {
+      setStatus('error');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      setStatus('error');
+      return;
+    }
 
     try {
       /**
@@ -33,7 +52,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(formState)
+        body: JSON.stringify(payload)
       });
 
       if (response.ok) {
@@ -52,7 +71,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
     { icon: <Facebook className="w-5 h-5" />, href: 'https://www.facebook.com/profile.php?id=100029730670833' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/amin_line' },
     { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/x.4min/' },
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/muhammed-emin-elomer-1031bb334/' },
+    { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/4min/' },
     { icon: <Github className="w-5 h-5" />, href: 'https://github.com/4min-prog' },
   ];
 

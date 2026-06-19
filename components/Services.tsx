@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Layout, Smartphone, Cloud, Search, Zap } from 'lucide-react';
+import { Code, Layout, Search, Zap } from 'lucide-react';
 import Reveal from './Reveal';
 
 interface ServicesProps {
@@ -11,8 +11,6 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
   const services = [
     { title: t.web.t, description: t.web.d, icon: <Code className="w-10 h-10 text-indigo-600" />, color: 'bg-indigo-50 dark:bg-indigo-900/20' },
     { title: t.ui.t, description: t.ui.d, icon: <Layout className="w-10 h-10 text-pink-600" />, color: 'bg-pink-50 dark:bg-pink-900/20' },
-    { title: t.mobile.t, description: t.mobile.d, icon: <Smartphone className="w-10 h-10 text-blue-600" />, color: 'bg-blue-50 dark:bg-blue-900/20' },
-    { title: t.cloud.t, description: t.cloud.d, icon: <Cloud className="w-10 h-10 text-cyan-600" />, color: 'bg-cyan-50 dark:bg-cyan-900/20' },
     { title: t.seo.t, description: t.seo.d, icon: <Search className="w-10 h-10 text-amber-600" />, color: 'bg-amber-50 dark:bg-amber-900/20' },
     { title: t.performance.t, description: t.performance.d, icon: <Zap className="w-10 h-10 text-emerald-600" />, color: 'bg-emerald-50 dark:bg-emerald-900/20' }
   ];

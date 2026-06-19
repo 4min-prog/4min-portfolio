@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronDown, GraduationCap, FileDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Code2, FileDown } from 'lucide-react';
 import { Language } from '../translations';
 import ParticleBackground from './ParticleBackground';
+import CVModal from './CVModal';
 
 interface HeroProps {
   t: any;
@@ -13,6 +14,7 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [cvModalOpen, setCvModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -63,18 +65,18 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-5 py-2.5 rounded-full bg-indigo-600/10 dark:bg-indigo-500/10 border border-indigo-600/20 dark:border-indigo-500/20 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-[0.2em] mb-10 shadow-sm backdrop-blur-sm">
-            <GraduationCap className="w-4 h-4" />
+            <Code2 className="w-4 h-4" />
             <span>{t.student}</span>
           </div>
           
           {/* Main Title */}
           <h1 className="text-5xl md:text-8xl font-black text-gray-900 dark:text-white leading-[1.1] mb-10 tracking-tighter">
             {t.title} <br />
-            <span className="inline-block mt-2 min-h-[1.2em] md:min-h-[1.1em] overflow-visible">
-              <span className="text-indigo-600 dark:text-indigo-400 drop-shadow-sm">
+            <span className="inline-block mt-2 min-h-[6rem] sm:min-h-[5rem] md:min-h-[4.5rem] align-top">
+              <span className="text-indigo-600 dark:text-indigo-400 drop-shadow-sm break-words">
                 {displayText}
               </span>
-              <span className="inline-block w-[22px] h-[6px] bg-indigo-600 dark:bg-indigo-400 ml-1.5 rtl:mr-1.5 rtl:ml-0 translate-y-[-1px] animate-pulse"></span>
+              <span className="inline-block w-[22px] h-[6px] bg-indigo-600 dark:bg-indigo-400 ml-1.5 rtl:mr-1.5 rtl:ml-0 align-baseline animate-pulse"></span>
             </span>
           </h1>
           
@@ -92,13 +94,12 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
               {t.explore} <ArrowRight className={`ml-2 rtl:mr-2 rtl:ml-0 rtl:rotate-180 w-6 h-6`} />
             </button>
             
-            <a 
-              href="/cv.pdf"
-              download="CV.pdf"
+            <button
+              onClick={() => setCvModalOpen(true)}
               className="inline-flex items-center px-10 py-4 rounded-2xl bg-teal-600 text-white font-black shadow-xl shadow-teal-600/20 hover:bg-teal-700 hover:shadow-teal-600/40 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer"
             >
               <FileDown className="mr-2 rtl:ml-2 rtl:mr-0 w-6 h-6" /> {t.downloadCV || 'Download CV'}
-            </a>
+            </button>
 
             <button 
               onClick={(e) => scrollToSection(e, 'contact')}
@@ -109,6 +110,7 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
           </div>
         </div>
       </div>
+      <CVModal isOpen={cvModalOpen} onClose={() => setCvModalOpen(false)} />
     </div>
   );
 };
