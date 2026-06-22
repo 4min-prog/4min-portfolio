@@ -173,7 +173,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div dir="ltr" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-14">
         <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 leading-none">
           {t.title}
