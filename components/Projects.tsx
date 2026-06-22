@@ -71,6 +71,16 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
       status: 'Live',
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
     },
+    {
+      key: 'restaurant',
+      title: pt.restaurant?.title || 'Adanalı Siirt Restaurant',
+      category: t.cat?.restaurant || 'Restaurant Website',
+      description: pt.restaurant?.desc || 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.',
+      link: 'https://adanali-siirt-restaurant.onrender.com/',
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80',
+      status: 'Live',
+      tags: ['HTML', 'CSS', 'JavaScript', 'React'],
+    },
   ];
 
   const trackRef = useRef<HTMLDivElement>(null);

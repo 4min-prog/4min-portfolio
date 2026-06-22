@@ -40,12 +40,14 @@ export const translations = {
         todo: 'Todo App',
         transfer: 'Transfer System',
         seyhomer: 'Mosque Website',
+        restaurant: 'Restaurant Website',
       },
       projects: {
         games: { title: 'Game Collection', desc: 'A growing collection of fun and addictive browser games published on itch.io.' },
         todo: { title: 'Todo Application', desc: 'A simple and efficient todo application to manage your daily tasks.' },
         transfer: { title: 'Money Transfer Tracking', desc: 'A comprehensive system to track and manage money transfers securely.', status: 'Live' },
         seyhomer: { title: 'Şeyh Ömer Mosque', desc: 'A modern, multilingual website for the historical Şeyh Ömer Mosque in Gaziantep.' },
+        restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.' },
       }
     },
     timeline: {
@@ -140,12 +142,14 @@ export const translations = {
         todo: 'Todo Uygulaması',
         transfer: 'Havale Sistemi',
         seyhomer: 'Cami Web Sitesi',
+        restaurant: 'Restoran Web Sitesi',
       },
       projects: {
         games: { title: 'Oyun Koleksiyonu', desc: 'itch.io üzerinde yayınlanan, giderek büyüyen eğlenceli ve bağımlılık yapan tarayıcı oyunları koleksiyonu.' },
         todo: { title: 'Todo Uygulaması', desc: 'Günlük görevlerinizi yönetmek için basit ve verimli bir todo uygulaması.' },
         transfer: { title: 'Para Havale Takip Sistemi', desc: 'Para transferlerini güvenli ve hızlı bir şekilde takip etmek için geliştirilen kapsamlı yönetim sistemi.', status: 'Canlı' },
         seyhomer: { title: 'Şeyh Ömer Camii', desc: 'Gaziantep\'teki tarihi Şeyh Ömer Camii için modern ve çok dilli bir web sitesi.' },
+        restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'Adana ve Siirt mutfağının lezzetlerini şık bir tasarımla sergileyen modern bir restoran web sitesi.' },
       }
     },
     timeline: {
@@ -240,12 +244,14 @@ export const translations = {
         todo: 'تطبيق المهام',
         transfer: 'نظام الحوالات',
         seyhomer: 'موقع المسجد',
+        restaurant: 'موقع مطعم',
       },
       projects: {
         games: { title: 'مجموعة الألعاب', desc: 'مجموعة متنامية من الألعاب المتصفح الممتعة والمنشورة على itch.io.' },
         todo: { title: 'تطبيق المهام', desc: 'تطبيق مهام بسيط وفعال لإدارة مهامك اليومية.' },
         transfer: { title: 'نظام تتبع الحوالات المالية', desc: 'نظام شامل لتتبع وإدارة الحوالات المالية بأمان.', status: 'مباشر' },
         seyhomer: { title: 'جامع الشيخ عمر', desc: 'موقع إلكتروني حديث ومتعدد اللغات لجامع الشيخ عمر التاريخي في غازي عنتاب.' },
+        restaurant: { title: 'مطعم أدنالي سعرد', desc: 'موقع مطعم عصري يعرض أطباق مطبخ أضنة وسعرد اللذيذة بتصميم أنيق.' },
       }
     },
     timeline: {
