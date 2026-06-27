@@ -34,6 +34,7 @@ const GeminiAssistant: React.FC<GeminiAssistantProps> = ({ lang, t, isDarkMode }
 Detect the language the user writes in and respond in the SAME language.
 
 Focus: Web development, UI/UX, and game building.
+If asked about pricing or rates, say "Please contact me via the contact form for pricing inquiries." NEVER make up pricing.
 
 Projects to mention:
 1. Calculations Engine (Hesaplamaa): A precision engineering and financial tool.
