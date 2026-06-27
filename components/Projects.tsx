@@ -146,17 +146,19 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
     snapRef.current = { from: offsetRef.current, to: target, start: performance.now(), duration: SNAP_DURATION };
   }, []);
 
-  const dragRef = useRef<{ startX: number; startOffset: number } | null>(null);
+  const dragRef = useRef<{ startX: number; startOffset: number; dragged: boolean } | null>(null);
 
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
-    dragRef.current = { startX: e.clientX, startOffset: offsetRef.current };
+    dragRef.current = { startX: e.clientX, startOffset: offsetRef.current, dragged: false };
     pausedRef.current = true;
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
   }, []);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!dragRef.current) return;
     const delta = e.clientX - dragRef.current.startX;
+    if (Math.abs(delta) > 5) {
+      dragRef.current.dragged = true;
+    }
     const track = trackRef.current;
     if (!track) return;
     const halfWidth = track.scrollWidth / 2;
@@ -170,6 +172,13 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
     dragRef.current = null;
     lastTimeRef.current = 0;
     pausedRef.current = false;
+  }, []);
+
+  const handleCardClick = useCallback((e: React.MouseEvent) => {
+    if (dragRef.current?.dragged) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
   }, []);
 
   return (
@@ -225,6 +234,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleCardClick}
               className="group flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
