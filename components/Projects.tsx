@@ -73,13 +73,23 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
     },
     {
       key: 'restaurant',
-      title: pt.restaurant?.title || 'Adanalı Siirt Restaurant',
+      title: pt.restaurant?.title || 'Adanal\u0131 Siirt Restaurant',
       category: t.cat?.restaurant || 'Restaurant Website',
       description: pt.restaurant?.desc || 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.',
       link: 'https://adanali-siirt-restaurant.onrender.com/',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80',
       status: 'Live',
       tags: ['HTML', 'CSS', 'JavaScript', 'React'],
+    },
+    {
+      key: 'fnd',
+      title: pt.fnd?.title || 'FND Yaz\u0131l\u0131m',
+      category: t.cat?.fnd || 'FND Software',
+      description: pt.fnd?.desc || 'A modern web design and SEO services website built with React.',
+      link: 'https://fndyazilim.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&auto=format&fit=crop&q=80',
+      status: pt.fnd?.status || 'Live',
+      tags: ['React', 'CSS', 'JavaScript', 'SEO'],
     },
   ];
 

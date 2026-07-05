@@ -41,6 +41,7 @@ export const translations = {
         transfer: 'Transfer System',
         seyhomer: 'Mosque Website',
         restaurant: 'Restaurant Website',
+        fnd: 'FND Software',
       },
       projects: {
         games: { title: 'Game Collection', desc: 'A growing collection of fun and addictive browser games published on itch.io.' },
@@ -48,6 +49,7 @@ export const translations = {
         transfer: { title: 'Money Transfer Tracking', desc: 'A comprehensive system to track and manage money transfers securely.', status: 'Live' },
         seyhomer: { title: 'Şeyh Ömer Mosque', desc: 'A modern, multilingual website for the historical Şeyh Ömer Mosque in Gaziantep.' },
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.' },
+        fnd: { title: 'FND Yazılım', desc: 'A modern web design and SEO services website built with React.', status: 'Live' },
       }
     },
     timeline: {
@@ -143,6 +145,7 @@ export const translations = {
         transfer: 'Havale Sistemi',
         seyhomer: 'Cami Web Sitesi',
         restaurant: 'Restoran Web Sitesi',
+        fnd: 'FND Yazılım',
       },
       projects: {
         games: { title: 'Oyun Koleksiyonu', desc: 'itch.io üzerinde yayınlanan, giderek büyüyen eğlenceli ve bağımlılık yapan tarayıcı oyunları koleksiyonu.' },
@@ -150,6 +153,7 @@ export const translations = {
         transfer: { title: 'Para Havale Takip Sistemi', desc: 'Para transferlerini güvenli ve hızlı bir şekilde takip etmek için geliştirilen kapsamlı yönetim sistemi.', status: 'Canlı' },
         seyhomer: { title: 'Şeyh Ömer Camii', desc: 'Gaziantep\'teki tarihi Şeyh Ömer Camii için modern ve çok dilli bir web sitesi.' },
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'Adana ve Siirt mutfağının lezzetlerini şık bir tasarımla sergileyen modern bir restoran web sitesi.' },
+        fnd: { title: 'FND Yazılım', desc: 'React ile oluşturulmuş modern bir web tasarımı ve SEO hizmetleri sitesi.', status: 'Canlı' },
       }
     },
     timeline: {
@@ -245,6 +249,7 @@ export const translations = {
         transfer: 'نظام الحوالات',
         seyhomer: 'موقع المسجد',
         restaurant: 'موقع مطعم',
+        fnd: 'FND للبرمجيات',
       },
       projects: {
         games: { title: 'مجموعة الألعاب', desc: 'مجموعة متنامية من الألعاب المتصفح الممتعة والمنشورة على itch.io.' },
@@ -252,6 +257,7 @@ export const translations = {
         transfer: { title: 'نظام تتبع الحوالات المالية', desc: 'نظام شامل لتتبع وإدارة الحوالات المالية بأمان.', status: 'مباشر' },
         seyhomer: { title: 'جامع الشيخ عمر', desc: 'موقع إلكتروني حديث ومتعدد اللغات لجامع الشيخ عمر التاريخي في غازي عنتاب.' },
         restaurant: { title: 'مطعم أدنالي سعرد', desc: 'موقع مطعم عصري يعرض أطباق مطبخ أضنة وسعرد اللذيذة بتصميم أنيق.' },
+        fnd: { title: 'FND للبرمجيات', desc: 'موقع حديث لخدمات تصميم الويب وتحسين محركات البحث تم بناؤه باستخدام React.', status: 'مباشر' },
       }
     },
     timeline: {
