@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin, CheckCircle2, Loader2, AlertCircle, Github } from 'lucide-react';
 
@@ -41,9 +40,6 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
     }
 
     try {
-      /**
-       * KULLANICI GÜNCELLEMESİ: Formspree ID'niz başarıyla entegre edildi.
-       */
       const FORMSPREE_ID = 'xwvnknjg'; 
 
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
@@ -62,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
         setStatus('error');
       }
     } catch (error) {
-      console.error('Form gönderim hatası:', error);
+      console.error('Form submission error:', error);
       setStatus('error');
     }
   };
@@ -78,55 +74,53 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-none">
-          {t.title}
-        </h2>
-        <div className="w-24 h-2.5 bg-indigo-600 mx-auto rounded-full mb-8"></div>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-medium">
+        <div className="section-label mb-6 inline-flex">
+          <span className="dot" />
+          <span>{t.infoTitle}</span>
+        </div>
+        <h2 className="heading-lg mb-6">{t.title}</h2>
+        <p className="text-lg text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed">
           {t.desc}
         </p>
       </div>
 
-      <div className="bg-white dark:bg-gray-950 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all">
+      <div className="premium-card overflow-hidden">
         <div className="flex flex-col lg:flex-row">
-          {/* Bilgi Paneli */}
-          <div className="lg:w-1/3 bg-indigo-600 p-12 lg:p-16 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div className="lg:w-1/3 p-10 lg:p-12 bg-[#121217] border-r border-[#23232D]">
+            <h3 className="text-xl font-bold text-white mb-8">{t.infoTitle}</h3>
             
-            <h3 className="text-3xl font-black mb-10 relative z-10">{t.infoTitle}</h3>
-            
-            <div className="space-y-10 mb-16 relative z-10">
-              <div className="flex items-start space-x-5 rtl:space-x-reverse group">
-                <div className="p-3 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors">
-                  <Mail className="w-6 h-6" />
+            <div className="space-y-8 mb-12">
+              <div className="flex items-start space-x-4 rtl:space-x-reverse group">
+                <div className="w-10 h-10 rounded-lg bg-[#09090B] border border-[#23232D] flex items-center justify-center text-[#A1A1AA] group-hover:text-[#7C3AED] transition-colors">
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-1">{t.email}</p>
-                  <p className="text-xl font-bold break-all">eminelomerr@gmail.com</p>
+                  <p className="text-[#71717A] text-xs font-bold uppercase tracking-widest mb-1">{t.email}</p>
+                  <p className="text-white font-medium text-sm">eminelomerr@gmail.com</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-5 rtl:space-x-reverse group">
-                <div className="p-3 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors">
-                  <MapPin className="w-6 h-6" />
+              <div className="flex items-start space-x-4 rtl:space-x-reverse group">
+                <div className="w-10 h-10 rounded-lg bg-[#09090B] border border-[#23232D] flex items-center justify-center text-[#A1A1AA] group-hover:text-[#7C3AED] transition-colors">
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-1">{t.location}</p>
-                  <p className="text-xl font-bold">Gaziantep, Turkey</p>
+                  <p className="text-[#71717A] text-xs font-bold uppercase tracking-widest mb-1">{t.location}</p>
+                  <p className="text-white font-medium text-sm">Gaziantep, Turkey</p>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10">
-              <p className="text-indigo-200 text-sm font-bold uppercase tracking-widest mb-6">{t.follow}</p>
-              <div className="flex space-x-4 rtl:space-x-reverse">
+            <div>
+              <p className="text-[#71717A] text-xs font-bold uppercase tracking-widest mb-4">{t.follow}</p>
+              <div className="flex space-x-3 rtl:space-x-reverse">
                 {socialLinks.map((social, idx) => (
                   <a 
                     key={idx} 
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white/10 rounded-2xl hover:bg-white hover:text-indigo-600 transition-all transform hover:-translate-y-1 shadow-lg"
+                    className="w-10 h-10 rounded-lg bg-[#09090B] border border-[#23232D] flex items-center justify-center text-[#A1A1AA] hover:text-[#7C3AED] hover:border-[#7C3AED] transition-all"
                   >
                     {social.icon}
                   </a>
@@ -135,37 +129,35 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
             </div>
           </div>
 
-          {/* Form Paneli */}
-          <div className="lg:w-2/3 p-8 lg:p-16 bg-[#0B0F1A] border-l border-white/5 relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+          <div className="lg:w-2/3 p-8 lg:p-12">
   {status === 'success' ? (
-    <div className="text-center py-16 animate-in fade-in zoom-in duration-500">
-      <div className="inline-flex items-center justify-center w-24 h-24 bg-indigo-100 dark:bg-indigo-900/30 rounded-full mb-8">
-        <CheckCircle2 className="w-12 h-12 text-indigo-600 dark:text-indigo-400" />
+    <div className="text-center py-16 animate-in">
+      <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/20 mb-6">
+        <CheckCircle2 className="w-10 h-10 text-[#7C3AED]" />
       </div>
-      <h3 className="text-4xl font-black text-gray-900 dark:text-white mb-4">Awesome!</h3>
-      <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-sm mx-auto font-medium">
+      <h3 className="heading-lg mb-4">Awesome!</h3>
+      <p className="text-[#A1A1AA] text-lg mb-10 max-w-sm mx-auto">
         Your message has reached my inbox. I will get back to you as soon as possible.
       </p>
       <button 
         onClick={() => setStatus('idle')}
-        className="px-10 py-4 bg-indigo-600 text-white font-black rounded-2xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/20 active:scale-95"
+        className="btn-primary"
       >
         Send New Message
       </button>
     </div>
   ) : (
-    <form onSubmit={handleSubmit} className="space-y-8 text-left rtl:text-right">
+    <form onSubmit={handleSubmit} className="space-y-6">
       {status === 'error' && (
-        <div className="flex items-center space-x-4 rtl:space-x-reverse p-5 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-2xl border border-red-100 dark:border-red-900/30 animate-shake">
-          <AlertCircle className="w-6 h-6 flex-shrink-0" />
-          <p className="font-bold">Something went wrong. Please try using my email address.</p>
+        <div className="flex items-center space-x-3 rtl:space-x-reverse p-4 rounded-xl bg-red-500/5 border border-red-500/20 text-red-400">
+          <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          <p className="font-medium text-sm">Something went wrong. Please try using my email address.</p>
         </div>
       )}
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 ml-1">{t.form.name}</label>
+          <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#71717A]">{t.form.name}</label>
             <input 
               type="text" 
               required
@@ -173,11 +165,11 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
               disabled={status === 'submitting'}
               value={formState.name}
               onChange={(e) => setFormState({...formState, name: e.target.value})}
-              className="w-full px-6 py-4 bg-gray-900/50 dark:bg-gray-900/80 border border-gray-800 focus:border-indigo-600 outline-none text-white font-bold transition-all rounded-xl focus:bg-gray-900"
+              className="w-full px-5 py-3.5 bg-[#121217] border border-[#23232D] focus:border-[#7C3AED] outline-none text-white font-medium transition-all rounded-xl text-sm"
             />
           </div>
           <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">{t.form.email}</label>
+            <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#71717A]">{t.form.email}</label>
             <input 
               type="email" 
               required
@@ -185,25 +177,25 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
               disabled={status === 'submitting'}
               value={formState.email}
               onChange={(e) => setFormState({...formState, email: e.target.value})}
-              className="w-full px-6 py-4 bg-gray-900/50 dark:bg-gray-900/80 border border-gray-800 focus:border-indigo-600 outline-none text-white font-bold transition-all rounded-xl focus:bg-gray-900"
+              className="w-full px-5 py-3.5 bg-[#121217] border border-[#23232D] focus:border-[#7C3AED] outline-none text-white font-medium transition-all rounded-xl text-sm"
             />
           </div>
         </div>
 
         <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">{t.form.subject}</label>
+          <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#71717A]">{t.form.subject}</label>
           <input 
             type="text" 
             placeholder="Subject"
             disabled={status === 'submitting'}
             value={formState.subject}
             onChange={(e) => setFormState({...formState, subject: e.target.value})}
-            className="w-full px-6 py-4 bg-gray-900/50 dark:bg-gray-900/80 border border-gray-800 focus:border-indigo-600 outline-none text-white font-bold transition-all rounded-xl focus:bg-gray-900"
+            className="w-full px-5 py-3.5 bg-[#121217] border border-[#23232D] focus:border-[#7C3AED] outline-none text-white font-medium transition-all rounded-xl text-sm"
           />
         </div>
 
         <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">{t.form.message}</label>
+          <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#71717A]">{t.form.message}</label>
           <textarea 
             rows={5} 
             required
@@ -211,24 +203,24 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
             disabled={status === 'submitting'}
             value={formState.message}
             onChange={(e) => setFormState({...formState, message: e.target.value})}
-            className="w-full px-6 py-4 bg-gray-900/50 dark:bg-gray-900/80 border border-gray-800 focus:border-indigo-600 outline-none resize-none text-white font-bold transition-all rounded-xl focus:bg-gray-900"
+            className="w-full px-5 py-3.5 bg-[#121217] border border-[#23232D] focus:border-[#7C3AED] outline-none resize-none text-white font-medium transition-all rounded-xl text-sm"
           ></textarea>
       </div>
 
       <button 
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full py-5 bg-indigo-600 text-white font-black rounded-2xl shadow-2xl shadow-indigo-600/20 hover:bg-indigo-700 transition-all flex items-center justify-center space-x-3 rtl:space-x-reverse transform active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed group"
+        className="w-full py-4 rounded-xl bg-[#121217] text-white font-bold border border-[#23232D] hover:border-[#7C3AED] transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed group"
       >
         {status === 'submitting' ? (
           <>
-            <Loader2 className="w-6 h-6 animate-spin" />
-            <span className="text-lg">Sending...</span>
+            <Loader2 className="w-5 h-5 animate-spin" />
+            <span>Sending...</span>
           </>
         ) : (
           <>
-            <span className="text-lg">{t.form.send}</span>
-            <Send className="w-6 h-6 rtl:rotate-180 group-hover:translate-x-1 transition-transform" />
+            <span>{t.form.send}</span>
+            <Send className="w-5 h-5 rtl:rotate-180 group-hover:translate-x-1 transition-transform" />
           </>
         )}
       </button>

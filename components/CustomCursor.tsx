@@ -11,7 +11,6 @@ const CustomCursor: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if device has a fine pointer (mouse)
     const mediaQuery = window.matchMedia('(pointer: fine)');
     setIsMobile(!mediaQuery.matches);
 
@@ -39,7 +38,6 @@ const CustomCursor: React.FC = () => {
     };
 
     const animate = () => {
-      // Smoothly follow the mouse with a lag (lerp)
       const lerp = (start: number, end: number, factor: number) => start + (end - start) * factor;
       
       outlinePos.current.x = lerp(outlinePos.current.x, mousePos.current.x, 0.15);
@@ -80,11 +78,11 @@ const CustomCursor: React.FC = () => {
     <>
       <div
         ref={dotRef}
-        className={`fixed top-0 left-0 w-1.5 h-1.5 bg-indigo-600 dark:bg-indigo-400 rounded-full pointer-events-none z-[9999] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`fixed top-0 left-0 w-1.5 h-1.5 bg-[#7C3AED] rounded-full pointer-events-none z-[9999] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       />
       <div
         ref={outlineRef}
-        className={`fixed top-0 left-0 w-8 h-8 border border-indigo-600/30 dark:border-white/20 rounded-full pointer-events-none z-[9998] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'bg-indigo-600/5 dark:bg-indigo-400/5 border-indigo-600/50 dark:border-indigo-400/50' : ''}`}
+        className={`fixed top-0 left-0 w-8 h-8 border border-[#7C3AED]/30 rounded-full pointer-events-none z-[9998] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'bg-[#7C3AED]/5 border-[#7C3AED]/50' : ''}`}
         style={{ transition: 'opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease' }}
       />
     </>
@@ -92,4 +90,3 @@ const CustomCursor: React.FC = () => {
 };
 
 export default CustomCursor;
-

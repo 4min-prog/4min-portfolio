@@ -81,7 +81,7 @@ const App: React.FC = () => {
 
   return (
     <div 
-      className="relative min-h-screen flex flex-col overflow-x-hidden bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100"
+      className="relative min-h-screen flex flex-col overflow-x-hidden bg-[#09090B] text-white transition-colors duration-300"
       dir={lang === 'ar' ? 'rtl' : 'ltr'}
     >
       <Preloader />
@@ -102,37 +102,37 @@ const App: React.FC = () => {
           </Reveal>
         </section>
 
-        <section id="skills" className="py-24 transition-colors duration-300 dark:bg-gray-950 bg-gray-50 scroll-mt-24">
+        <section id="skills" className="py-28 md:py-36 scroll-mt-24 bg-[#09090B]">
           <Reveal>
             <Skills t={t.skills} />
           </Reveal>
         </section>
 
-        <section id="timeline" className="py-24 transition-colors duration-300 dark:bg-gray-900 bg-white scroll-mt-24">
+        <section id="timeline" className="py-28 md:py-36 scroll-mt-24 bg-[#121217]">
           <Reveal>
             <Timeline t={t.timeline} />
           </Reveal>
         </section>
         
-        <section id="services" className="py-24 transition-colors duration-300 dark:bg-gray-900 bg-white scroll-mt-24">
+        <section id="services" className="py-28 md:py-36 scroll-mt-24 bg-[#121217]">
           <Reveal>
             <Services t={t.services} />
           </Reveal>
         </section>
         
-        <section id="projects" className="py-24 transition-colors duration-300 dark:bg-gray-950 bg-gray-50 scroll-mt-24">
+        <section id="projects" className="py-28 md:py-36 scroll-mt-24 bg-[#09090B]">
           <Reveal>
             <Projects t={t.projects} />
           </Reveal>
         </section>
         
-        <section id="about" className="py-24 transition-colors duration-300 dark:bg-gray-900 bg-white scroll-mt-24">
+        <section id="about" className="py-28 md:py-36 scroll-mt-24 bg-[#121217]">
           <Reveal>
             <About t={t.about} lang={lang} />
           </Reveal>
         </section>
         
-        <section id="contact" className="py-24 transition-colors duration-300 dark:bg-gray-950 bg-gray-50 scroll-mt-24">
+        <section id="contact" className="py-28 md:py-36 scroll-mt-24 bg-[#09090B]">
           <Reveal>
             <Contact t={t.contact} />
           </Reveal>

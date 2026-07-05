@@ -38,7 +38,7 @@ const Reveal: React.FC<RevealProps> = ({ children, width = '100%', delay = 0 }) 
       className={`transition-all duration-700 ease-out ${
         isVisible 
           ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-20'
+          : 'opacity-0 translate-y-12'
       }`}
       style={{ 
         position: 'relative',

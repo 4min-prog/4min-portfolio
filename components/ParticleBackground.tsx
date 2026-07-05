@@ -12,7 +12,7 @@ const ParticleBackground: React.FC = () => {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    const mouse = { x: 0, y: 0, radius: 100 };
+    const mouse = { x: 0, y: 0, radius: 120 };
 
     class Particle {
       x: number;
@@ -26,12 +26,11 @@ const ParticleBackground: React.FC = () => {
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 2 + 1;
+        this.size = Math.random() * 1.5 + 0.5;
         this.baseX = this.x;
         this.baseY = this.y;
         this.density = (Math.random() * 30) + 1;
-        // Subtle indigo colors
-        this.color = Math.random() > 0.5 ? 'rgba(79, 70, 229, 0.4)' : 'rgba(99, 102, 241, 0.3)';
+        this.color = Math.random() > 0.7 ? 'rgba(124, 58, 237, 0.3)' : 'rgba(255, 255, 255, 0.15)';
       }
 
       draw() {
@@ -72,7 +71,7 @@ const ParticleBackground: React.FC = () => {
 
     const init = () => {
       particles = [];
-      const numberOfParticles = (canvas.width * canvas.height) / 9000;
+      const numberOfParticles = (canvas.width * canvas.height) / 12000;
       for (let i = 0; i < numberOfParticles; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
@@ -134,7 +133,7 @@ const ParticleBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: 0.4 }}
     />
   );
 };

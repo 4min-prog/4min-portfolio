@@ -40,11 +40,12 @@ const Skills: React.FC<SkillsProps> = ({ t }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-none">
-          {t.title}
-        </h2>
-        <div className="w-24 h-2.5 bg-indigo-600 mx-auto rounded-full mb-8" />
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
+        <div className="section-label mb-6 inline-flex">
+          <span className="dot" />
+          <span>{t.title}</span>
+        </div>
+        <h2 className="heading-lg mb-6">{t.title}</h2>
+        <p className="text-lg text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed">
           {t.desc}
         </p>
       </div>
