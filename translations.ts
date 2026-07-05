@@ -3,7 +3,7 @@ export type Language = 'en' | 'tr' | 'ar';
 
 export const translations = {
   en: {
-    nav: { home: 'Home', skills: 'Skills', timeline: 'Journey', services: 'Services', projects: 'Projects', about: 'About', contact: 'Contact' },
+    nav: { home: 'Home', skills: 'Skills', timeline: 'Journey', services: 'Services', projects: 'Projects', about: 'About', contact: 'Contact', language: 'Language', toggleDark: 'Toggle Dark Mode' },
     hero: {
       student: 'Web Developer',
       title: 'Crafting The Future',
@@ -23,6 +23,7 @@ export const translations = {
       }
     },
     services: {
+      label: 'Services',
       title: 'Our Services',
       desc: 'We offer comprehensive digital solutions to help you scale your business and establish a powerful online presence.',
       web: { t: 'Web Development', d: 'Building fast, accessible, and responsive websites using modern frameworks.' },
@@ -42,6 +43,7 @@ export const translations = {
         seyhomer: 'Mosque Website',
         restaurant: 'Restaurant Website',
         fnd: 'FND Software',
+        galary: 'Galary',
       },
       projects: {
         games: { title: 'Game Collection', desc: 'A growing collection of fun and addictive browser games published on itch.io.' },
@@ -50,9 +52,11 @@ export const translations = {
         seyhomer: { title: 'Şeyh Ömer Mosque', desc: 'A modern, multilingual website for the historical Şeyh Ömer Mosque in Gaziantep.' },
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.' },
         fnd: { title: 'FND Yazılım', desc: 'A modern web design and SEO services website built with React.', status: 'Live' },
+        galary: { title: 'Galary', desc: 'Add tag and description to images easily.', status: 'Live' },
       }
     },
     timeline: {
+      label: 'Journey',
       title: 'My Journey',
       desc: 'Key milestones shaping who I am as a developer.',
       items: [
@@ -79,6 +83,12 @@ export const translations = {
       badgeTitle: 'WEB',
       badgeSubtitle: 'DEVELOPER'
     },
+    cv: {
+      title: 'View CV',
+      desc: 'Select language',
+      en: 'English CV',
+      tr: 'Türkçe CV'
+    },
     contact: {
       title: 'Get In Touch',
       desc: 'Have a project in mind? Drop a message and let\'s create something extraordinary.',
@@ -87,12 +97,18 @@ export const translations = {
       call: 'Call Us',
       location: 'Location',
       follow: 'Follow Us',
-      form: { name: 'Your Name', email: 'Email Address', subject: 'Subject', message: 'Message', send: 'Send Message' }
+      form: { name: 'Your Name', email: 'Email Address', subject: 'Subject', message: 'Message', send: 'Send Message' },
+      success: { title: 'Awesome!', desc: 'Your message has reached my inbox. I will get back to you as soon as possible.' },
+      error: 'Something went wrong. Please try using my email address.',
+      sending: 'Sending...',
+      sendNew: 'Send New Message'
     },
     footer: {
       desc: 'A portfolio focused on creating modern and user-friendly web applications.',
       links: 'Quick Links',
       whatIDo: 'What I Do',
+      quickLinks: { home: 'Home', skills: 'Skills', services: 'Services', projects: 'Projects', about: 'About' },
+      whatIDoItems: { web: 'Web Development', ui: 'UI/UX Design', games: 'Games', tools: 'Tools' },
       newsletter: 'Newsletter',
       newsDesc: 'Subscribe to follow my progress.',
       placeholder: 'Your Email',
@@ -100,14 +116,18 @@ export const translations = {
       rights: 'All rights reserved.'
     },
     ai: {
+      name: '4min AI Assistant',
+      online: 'Online',
+      blocked: "I can only answer questions about 4min's projects and skills.",
       welcome: 'Hi! I am the 4min AI Assistant. Ask me anything about my projects or skills!',
       placeholder: 'Ask me something...',
       error: 'Sorry, I encountered an error. Please try again.',
       quotaError: 'I have reached my message limit for now. Please wait a minute before asking more!'
-    }
+    },
+    preloader: { loading: 'Loading Excellence' }
   },
   tr: {
-    nav: { home: 'Ana Sayfa', skills: 'Yetenekler', timeline: 'Yolculuğum', services: 'Hizmetler', projects: 'Projeler', about: 'Hakkımda', contact: 'İletişim' },
+    nav: { home: 'Ana Sayfa', skills: 'Yetenekler', timeline: 'Yolculuğum', services: 'Hizmetler', projects: 'Projeler', about: 'Hakkımda', contact: 'İletişim', language: 'Dil', toggleDark: 'Karanlık Modu Aç/Kapat' },
     hero: {
       student: 'Web Geliştirici',
       title: 'Geleceği İnşa Ediyorum',
@@ -127,6 +147,7 @@ export const translations = {
       }
     },
     services: {
+      label: 'Hizmetler',
       title: 'Hizmetlerimiz',
       desc: 'İşinizi ölçeklendirmenize ve güçlü bir çevrimiçi varlık oluşturmanıza yardımcı olacak kapsamlı dijital çözümler sunuyoruz.',
       web: { t: 'Web Geliştirme', d: 'Modern frameworkler kullanarak hızlı, erişilebilir ve duyarlı web siteleri oluşturma.' },
@@ -146,6 +167,7 @@ export const translations = {
         seyhomer: 'Cami Web Sitesi',
         restaurant: 'Restoran Web Sitesi',
         fnd: 'FND Yazılım',
+        galary: 'Galeri',
       },
       projects: {
         games: { title: 'Oyun Koleksiyonu', desc: 'itch.io üzerinde yayınlanan, giderek büyüyen eğlenceli ve bağımlılık yapan tarayıcı oyunları koleksiyonu.' },
@@ -154,9 +176,11 @@ export const translations = {
         seyhomer: { title: 'Şeyh Ömer Camii', desc: 'Gaziantep\'teki tarihi Şeyh Ömer Camii için modern ve çok dilli bir web sitesi.' },
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'Adana ve Siirt mutfağının lezzetlerini şık bir tasarımla sergileyen modern bir restoran web sitesi.' },
         fnd: { title: 'FND Yazılım', desc: 'React ile oluşturulmuş modern bir web tasarımı ve SEO hizmetleri sitesi.', status: 'Canlı' },
+        galary: { title: 'Galeri', desc: 'Görsellere kolayca etiket ve açıklama ekleyin.', status: 'Canlı' },
       }
     },
     timeline: {
+      label: 'Yolculuğum',
       title: 'Yolculuğum',
       desc: 'Bir geliştirici olarak beni şekillendiren önemli dönüm noktaları.',
       items: [
@@ -183,6 +207,12 @@ export const translations = {
       badgeTitle: 'WEB',
       badgeSubtitle: 'GELİŞTİRİCİ'
     },
+    cv: {
+      title: 'CV Görüntüle',
+      desc: 'Dil seçiniz',
+      en: 'İngilizce CV',
+      tr: 'Türkçe CV'
+    },
     contact: {
       title: 'İletişime Geç',
       desc: 'Aklınızda bir proje mi var? Mesaj bırakın ve birlikte olağanüstü bir şey yaratalım.',
@@ -191,12 +221,18 @@ export const translations = {
       call: 'Bizi Arayın',
       location: 'Konum',
       follow: 'Bizi Takip Edin',
-      form: { name: 'Adınız', email: 'E-posta Adresiniz', subject: 'Konu', message: 'Mesaj', send: 'Mesaj Gönder' }
+      form: { name: 'Adınız', email: 'E-posta Adresiniz', subject: 'Konu', message: 'Mesaj', send: 'Mesaj Gönder' },
+      success: { title: 'Harika!', desc: 'Mesajınız gelen kutum ulaştı. En kısa sürede size geri döneceğim.' },
+      error: 'Bir şeyler ters gitti. Lütfen e-posta adresimi kullanmayı deneyin.',
+      sending: 'Gönderiliyor...',
+      sendNew: 'Yeni Mesaj Gönder'
     },
     footer: {
       desc: 'Modern ve kullanıcı dostu web uygulamaları oluşturmaya odaklanmış bir portfolyo.',
       links: 'Hızlı Linkler',
       whatIDo: 'Neler Yapıyorum?',
+      quickLinks: { home: 'Ana Sayfa', skills: 'Yetenekler', services: 'Hizmetler', projects: 'Projeler', about: 'Hakkımda' },
+      whatIDoItems: { web: 'Web Geliştirme', ui: 'UI/UX Tasarım', games: 'Oyunlar', tools: 'Araçlar' },
       newsletter: 'Bülten',
       newsDesc: 'Gelişimimi takip etmek için abone olun.',
       placeholder: 'E-postanız',
@@ -204,14 +240,18 @@ export const translations = {
       rights: 'Tüm hakları saklıdır.'
     },
     ai: {
+      name: '4min Yapay Zeka Asistanı',
+      online: 'Çevrimiçi',
+      blocked: 'Sadece 4min\'in projeleri ve yetenekleri hakkında soruları yanıtlayabilirim.',
       welcome: 'Merhaba! Ben 4min Yapay Zeka Asistanı. Bana projelerim veya yeteneklerim hakkında her şeyi sorabilirsin!',
       placeholder: 'Bana bir şey sor...',
       error: 'Üzgünüm, bir hata oluştu. Lütfen tekrar deneyin.',
       quotaError: 'Şu anki kullanım limitime ulaştım. Lütfen biraz bekleyip tekrar sorun!'
-    }
+    },
+    preloader: { loading: 'Mükemmellik Yükleniyor' }
   },
   ar: {
-    nav: { home: 'الرئيسية', skills: 'المهارات', timeline: 'رحلتي', services: 'الخدمات', projects: 'المشاريع', about: 'حول', contact: 'اتصل بنا' },
+    nav: { home: 'الرئيسية', skills: 'المهارات', timeline: 'رحلتي', services: 'الخدمات', projects: 'المشاريع', about: 'حول', contact: 'اتصل بنا', language: 'اللغة', toggleDark: 'تبديل الوضع الداكن' },
     hero: {
       student: 'مطور ويب',
       title: 'صناعة المستقبل',
@@ -231,6 +271,7 @@ export const translations = {
       }
     },
     services: {
+      label: 'الخدمات',
       title: 'خدماتنا',
       desc: 'نحن نقدم حلولاً رقمية شاملة لمساعدتك على توسيع نطاق عملك وإنشاء حضور قوي عبر الإنترنت.',
       web: { t: 'تطوير الويب', d: 'بناء مواقع سريعة وسهلة الوصول ومتجاوبة باستخدام أطر العمل الحديثة.' },
@@ -250,6 +291,7 @@ export const translations = {
         seyhomer: 'موقع المسجد',
         restaurant: 'موقع مطعم',
         fnd: 'FND للبرمجيات',
+        galary: 'المعرض',
       },
       projects: {
         games: { title: 'مجموعة الألعاب', desc: 'مجموعة متنامية من الألعاب المتصفح الممتعة والمنشورة على itch.io.' },
@@ -258,9 +300,11 @@ export const translations = {
         seyhomer: { title: 'جامع الشيخ عمر', desc: 'موقع إلكتروني حديث ومتعدد اللغات لجامع الشيخ عمر التاريخي في غازي عنتاب.' },
         restaurant: { title: 'مطعم أدنالي سعرد', desc: 'موقع مطعم عصري يعرض أطباق مطبخ أضنة وسعرد اللذيذة بتصميم أنيق.' },
         fnd: { title: 'FND للبرمجيات', desc: 'موقع حديث لخدمات تصميم الويب وتحسين محركات البحث تم بناؤه باستخدام React.', status: 'مباشر' },
+        galary: { title: 'المعرض', desc: 'أضف الوسوم والوصف للصور بسهولة.', status: 'مباشر' },
       }
     },
     timeline: {
+      label: 'رحلتي',
       title: 'رحلتي',
       desc: 'المحطات الرئيسية التي شكّلت مسيرتي كمطور.',
       items: [
@@ -287,6 +331,12 @@ export const translations = {
       badgeTitle: 'ويب',
       badgeSubtitle: 'مطور'
     },
+    cv: {
+      title: 'عرض السيرة الذاتية',
+      desc: 'اختر اللغة',
+      en: 'السيرة الذاتية بالإنجليزية',
+      tr: 'السيرة الذاتية بالتركية'
+    },
     contact: {
       title: 'تواصل معي',
       desc: 'هل لديك مشروع في بالك؟ أرسل رسالة ولنقم بإنشاء شيء استثنائي.',
@@ -295,12 +345,18 @@ export const translations = {
       call: 'اتصل بنا',
       location: 'الموقع',
       follow: 'تابعنا',
-      form: { name: 'اسمك', email: 'البريد الإلكتروني', subject: 'الموضوع', message: 'الرسالة', send: 'إرسال الرسالة' }
+      form: { name: 'اسمك', email: 'البريد الإلكتروني', subject: 'الموضوع', message: 'الرسالة', send: 'إرسال الرسالة' },
+      success: { title: 'رائع!', desc: 'لقد وصلت رسالتك إلى صندوق الوارد الخاص بي. سأعود إليك في أقرب وقت ممكن.' },
+      error: 'حدث خطأ ما. يرجى محاولة استخدام عنوان بريدي الإلكتروني.',
+      sending: 'جارٍ الإرسال...',
+      sendNew: 'إرسال رسالة جديدة'
     },
     footer: {
       desc: 'محفظة تركز على إنشاء تطبيقات ويب حديثة وسهلة الاستخدام.',
       links: 'روابط سريعة',
       whatIDo: 'ماذا أفعل',
+      quickLinks: { home: 'الرئيسية', skills: 'المهارات', services: 'الخدمات', projects: 'المشاريع', about: 'حول' },
+      whatIDoItems: { web: 'تطوير الويب', ui: 'تصميم واجهة المستخدم', games: 'الألعاب', tools: 'الأدوات' },
       newsletter: 'النشرة الإخبارية',
       newsDesc: 'اشترك لمتابعة تقدمي.',
       placeholder: 'بريدك الإلكتروني',
@@ -308,10 +364,14 @@ export const translations = {
       rights: 'جميع الحقوق محفوظة.'
     },
     ai: {
+      name: 'مساعد 4min الذكي',
+      online: 'متصل',
+      blocked: 'يمكنني فقط الإجابة على الأسئلة حول مشاريع ومهارات 4min.',
       welcome: 'مرحباً! أنا مساعد 4min الذكي. اسألني أي شيء عن مشاريعي أو مهاراتي!',
       placeholder: 'اسألني شيئاً...',
       error: 'عذراً، واجهت خطأً. يرجى المحاولة مرة أخرى.',
       quotaError: 'لقد وصلت إلى حد الرسائل الخاص بي حالياً. يرجى الانتظار دقيقة قبل السؤال مرة أخرى!'
-    }
+    },
+    preloader: { loading: 'جارٍ التحميل' }
   }
 };

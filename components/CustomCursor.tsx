@@ -78,11 +78,11 @@ const CustomCursor: React.FC = () => {
     <>
       <div
         ref={dotRef}
-        className={`fixed top-0 left-0 w-1.5 h-1.5 bg-[#7C3AED] rounded-full pointer-events-none z-[9999] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`fixed top-0 left-0 w-1.5 h-1.5 bg-accent rounded-full pointer-events-none z-[9999] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       />
       <div
         ref={outlineRef}
-        className={`fixed top-0 left-0 w-8 h-8 border border-[#7C3AED]/30 rounded-full pointer-events-none z-[9998] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'bg-[#7C3AED]/5 border-[#7C3AED]/50' : ''}`}
+        className={`fixed top-0 left-0 w-8 h-8 border border-accent/30 rounded-full pointer-events-none z-[9998] transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'} ${isHovering ? 'bg-accent/5 border-accent/50' : ''}`}
         style={{ transition: 'opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease' }}
       />
     </>

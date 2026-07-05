@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { translations, Language } from '../translations';
 
-const Preloader: React.FC = () => {
+interface PreloaderProps {
+  lang: Language;
+}
+
+const Preloader: React.FC<PreloaderProps> = ({ lang }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
+
+  const t = translations[lang]?.preloader?.loading || 'Loading Excellence';
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +27,7 @@ const Preloader: React.FC = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-[#09090B] transition-transform duration-700 ease-in-out ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-deep transition-transform duration-700 ease-in-out ${
         isExiting ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
@@ -33,19 +40,19 @@ const Preloader: React.FC = () => {
               }`}
               style={{ transitionDelay: '0.1s' }}
             >
-              4<span className="text-[#7C3AED]">min</span>
+              4<span className="text-accent">min</span>
             </h1>
           </div>
           
           <div className="w-32 h-[2px] bg-[#23232D] rounded-full overflow-hidden relative">
             <div 
-              className={`absolute inset-0 bg-[#7C3AED] transition-all duration-[2000ms] ease-out`}
+              className={`absolute inset-0 bg-accent transition-all duration-[2000ms] ease-out`}
               style={{ width: isExiting ? '100%' : '100%' }}
             />
           </div>
           
-          <p className="mt-4 text-[#7C3AED]/40 text-[10px] uppercase tracking-[0.3em] font-bold animate-pulse">
-            Loading Excellence
+          <p className="mt-4 text-accent/40 text-[10px] uppercase tracking-[0.3em] font-bold animate-pulse">
+            {t}
           </p>
         </div>
       </div>

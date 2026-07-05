@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronDown, Code2, FileDown } from 'lucide-react';
+import { ArrowRight, FileDown } from 'lucide-react';
 import { Language } from '../translations';
-import ParticleBackground from './ParticleBackground';
 import CVModal from './CVModal';
 
 interface HeroProps {
   t: any;
+  cvT: any;
   lang: Language;
 }
 
-const Hero: React.FC<HeroProps> = ({ t, lang }) => {
+const Hero: React.FC<HeroProps> = ({ t, cvT, lang }) => {
   const [displayText, setDisplayText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -50,34 +50,42 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
   };
 
   const titleWords = t.title.split(' ');
-  const lastWord = titleWords.pop();
+  const lastWord = titleWords.pop() || '';
+  const titleStart = titleWords.join(' ');
 
   return (
-    <div className="relative pt-32 pb-20 md:pt-56 md:pb-48 overflow-hidden flex items-center justify-center min-h-[70vh] bg-[#09090B]">
+    <div className="relative pt-32 pb-20 md:pt-56 md:pb-48 overflow-hidden flex items-center justify-center min-h-[70vh]">
       <div className="absolute inset-0 bg-radial-glow pointer-events-none" />
       <div className="absolute inset-0 bg-noise pointer-events-none" />
-      <ParticleBackground />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center max-w-5xl mx-auto">
-          <div className="section-label mb-8 md:mb-10 inline-flex">
-            <span className="dot" />
-            <span>{t.student}</span>
+          {/* Infinite marquee heading */}
+          <div className="mb-6 md:mb-8 overflow-hidden" dir="ltr">
+            <div className="marquee-track">
+              <div className="marquee-content">
+                <span className="heading-xl whitespace-nowrap">{titleStart} <span className="text-gradient-accent">{lastWord}</span></span>
+                <span className="heading-xl whitespace-nowrap mx-16 text-accent/30 font-mono text-2xl md:text-4xl tracking-tighter">&lt;/&gt;</span>
+                <span className="heading-xl whitespace-nowrap">{titleStart} <span className="text-gradient-accent">{lastWord}</span></span>
+                <span className="heading-xl whitespace-nowrap mx-16 text-accent/30 font-mono text-2xl md:text-4xl tracking-tighter">&lt;/&gt;</span>
+                <span className="heading-xl whitespace-nowrap">{titleStart} <span className="text-gradient-accent">{lastWord}</span></span>
+                <span className="heading-xl whitespace-nowrap mx-16 text-accent/30 font-mono text-2xl md:text-4xl tracking-tighter">&lt;/&gt;</span>
+                <span className="heading-xl whitespace-nowrap">{titleStart} <span className="text-gradient-accent">{lastWord}</span></span>
+                <span className="heading-xl whitespace-nowrap mx-16 text-accent/30 font-mono text-2xl md:text-4xl tracking-tighter">&lt;/&gt;</span>
+                <span className="heading-xl whitespace-nowrap">{titleStart} <span className="text-gradient-accent">{lastWord}</span></span>
+                <span className="heading-xl whitespace-nowrap mx-16 text-accent/30 font-mono text-2xl md:text-4xl tracking-tighter">&lt;/&gt;</span>
+              </div>
+            </div>
           </div>
-          
-          <h1 className="heading-xl mb-6 md:mb-8">
-            {titleWords.join(' ')}{' '}
-            <span className="text-gradient-accent">{lastWord}</span>
-          </h1>
           
           <div className="h-8 md:h-10 mb-8 md:mb-10">
-            <span className="text-lg md:text-2xl text-[#A1A1AA] font-medium">
+            <span className="text-lg md:text-2xl text-secondary font-medium">
               {displayText}
             </span>
-            <span className="inline-block w-[2px] h-5 md:h-7 bg-[#7C3AED] ml-1 align-middle animate-pulse" />
+            <span className="inline-block w-[2px] h-5 md:h-7 bg-accent align-middle animate-pulse ms-1" />
           </div>
           
-          <p className="text-base md:text-lg text-[#71717A] max-w-2xl mx-auto leading-relaxed mb-10 md:mb-12">
+          <p className="text-base md:text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10 md:mb-12">
             {t.desc}
           </p>
           
@@ -105,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ t, lang }) => {
           </div>
         </div>
       </div>
-      <CVModal isOpen={cvModalOpen} onClose={() => setCvModalOpen(false)} />
+      <CVModal cvT={cvT} isOpen={cvModalOpen} onClose={() => setCvModalOpen(false)} />
     </div>
   );
 };

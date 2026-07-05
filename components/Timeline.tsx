@@ -34,16 +34,16 @@ const Timeline: React.FC<TimelineProps> = ({ t }) => {
       <div className="text-center mb-24 relative">
         <div className="section-label mb-6 inline-flex">
           <span className="dot" />
-          <span>Professional Growth</span>
+          <span>{t.label}</span>
         </div>
         <h2 className="heading-lg mb-6">{t.title}</h2>
-        <p className="text-lg text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
           {t.desc}
         </p>
       </div>
 
       <div ref={ref} className="relative mt-8">
-        <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[1px] bg-[#23232D] md:-translate-x-px" />
+        <div className="absolute start-6 md:start-1/2 top-0 bottom-0 w-[1px] bg-[#23232D] md:-translate-x-px" />
 
         <div className="space-y-16 md:space-y-24">
           {timelineItems.map((item, idx) => {
@@ -58,16 +58,16 @@ const Timeline: React.FC<TimelineProps> = ({ t }) => {
                 }`}
                 style={{ transitionDelay: `${idx * 150}ms` }}
               >
-                <div className={`hidden md:flex md:w-1/2 ${isLeft ? 'justify-end pr-16 text-right' : 'order-last justify-start pl-16 text-left'}`}>
+                <div className={`hidden md:flex md:w-1/2 ${isLeft ? 'justify-end pe-16 text-end' : 'order-last justify-start ps-16 text-start'}`}>
                   {isLeft && (
                     <div className="max-w-md group-hover:scale-[1.02] transition-transform duration-500">
-                      <span className="inline-block text-[11px] font-bold tracking-widest px-3 py-1 rounded-lg mb-4 bg-[#121217] text-[#A1A1AA] border border-[#23232D]">
+                      <span className="inline-block text-[11px] font-bold tracking-widest px-3 py-1 rounded-lg mb-4 bg-surface text-secondary border border-border">
                         {item.year}
                       </span>
                       <h3 className="text-2xl font-bold text-white mb-4 tracking-tight leading-tight">
                         {data.title}
                       </h3>
-                      <p className="text-base text-[#71717A] leading-relaxed">
+                      <p className="text-base text-muted leading-relaxed">
                         {data.desc}
                       </p>
                     </div>
@@ -75,40 +75,40 @@ const Timeline: React.FC<TimelineProps> = ({ t }) => {
                   {!isLeft && <div className="invisible" />}
                 </div>
 
-                <div className="relative z-10 flex-shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
-                  <div className="w-12 h-12 rounded-xl bg-[#121217] border border-[#23232D] flex items-center justify-center text-[#A1A1AA] group-hover:text-[#7C3AED] group-hover:border-[#7C3AED] transition-all duration-500">
+                <div className="relative z-10 flex-shrink-0 md:absolute md:start-1/2 md:-translate-x-1/2 md:mt-1">
+                  <div className="w-12 h-12 rounded-xl bg-surface border border-border flex items-center justify-center text-secondary group-hover:text-accent group-hover:border-accent transition-all duration-500">
                     {item.icon}
                   </div>
                   {idx === timelineItems.length - 1 && (
-                    <div className="absolute inset-0 rounded-xl bg-[#7C3AED] animate-ping opacity-10 -z-10" />
+                    <div className="absolute inset-0 rounded-xl bg-accent animate-ping opacity-10 -z-10" />
                   )}
                 </div>
 
-                <div className={`hidden md:flex md:w-1/2 ${!isLeft ? 'justify-start pl-16 text-left' : 'order-first justify-end pr-16 text-right'}`}>
+                <div className={`hidden md:flex md:w-1/2 ${!isLeft ? 'justify-start ps-16 text-start' : 'order-first justify-end pe-16 text-end'}`}>
                   {!isLeft && (
                     <div className="max-w-md group-hover:scale-[1.02] transition-transform duration-500">
-                      <span className="inline-block text-[11px] font-bold tracking-widest px-3 py-1 rounded-lg mb-4 bg-[#121217] text-[#A1A1AA] border border-[#23232D]">
+                      <span className="inline-block text-[11px] font-bold tracking-widest px-3 py-1 rounded-lg mb-4 bg-surface text-secondary border border-border">
                         {item.year}
                       </span>
                       <h3 className="text-2xl font-bold text-white mb-4 tracking-tight leading-tight">
                         {data.title}
                       </h3>
-                      <p className="text-base text-[#71717A] leading-relaxed">
+                      <p className="text-base text-muted leading-relaxed">
                         {data.desc}
                       </p>
                     </div>
                   )}
                 </div>
 
-                <div className="md:hidden flex-grow pl-6">
+                <div className="md:hidden flex-grow ps-6">
                   <div className="premium-card p-6">
-                    <span className="inline-block text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-lg mb-3 bg-[#121217] text-[#A1A1AA] border border-[#23232D]">
+                    <span className="inline-block text-[10px] font-bold tracking-widest px-2 py-0.5 rounded-lg mb-3 bg-surface text-secondary border border-border">
                       {item.year}
                     </span>
                     <h3 className="text-lg font-bold text-white mb-2 leading-tight">
                       {data.title}
                     </h3>
-                    <p className="text-sm text-[#71717A] leading-relaxed">
+                    <p className="text-sm text-muted leading-relaxed">
                       {data.desc}
                     </p>
                   </div>

@@ -19,10 +19,10 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
       <div className="text-center mb-16">
         <div className="section-label mb-6 inline-flex">
           <span className="dot" />
-          <span>Services</span>
+          <span>{t.label}</span>
         </div>
         <h2 className="heading-lg mb-6">{t.title}</h2>
-        <p className="text-lg text-[#A1A1AA] max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
           {t.desc}
         </p>
       </div>
@@ -31,11 +31,11 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
         {services.map((service, index) => (
           <Reveal key={index} delay={index * 0.1}>
             <div className="premium-card p-8 h-full group">
-              <div className="w-14 h-14 rounded-xl bg-[#121217] border border-[#23232D] flex items-center justify-center mb-6 text-white group-hover:text-[#7C3AED] transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-surface border border-border flex items-center justify-center mb-6 text-white group-hover:text-accent transition-colors">
                 {service.icon}
               </div>
               <h3 className="text-lg font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-sm text-[#A1A1AA] leading-relaxed">
+              <p className="text-sm text-secondary leading-relaxed">
                 {service.description}
               </p>
             </div>

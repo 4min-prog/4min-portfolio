@@ -32,22 +32,22 @@
 
 .logoloop__item {
   flex: 0 0 auto;
-  margin-right: var(--logoloop-gap);
+  margin-inline-end: var(--logoloop-gap);
   font-size: var(--logoloop-logoHeight);
   line-height: 1;
 }
 
 .logoloop--vertical .logoloop__item {
-  margin-right: 0;
+  margin-inline-end: 0;
   margin-bottom: var(--logoloop-gap);
 }
 
 .logoloop__item:last-child {
-  margin-right: var(--logoloop-gap);
+  margin-inline-end: var(--logoloop-gap);
 }
 
 .logoloop--vertical .logoloop__item:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
   margin-bottom: var(--logoloop-gap);
 }
 
@@ -111,7 +111,7 @@
 }
 
 .logoloop--fade::before {
-  left: 0;
+  inset-inline-start: 0;
   background: linear-gradient(
     to right,
     var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
@@ -120,7 +120,7 @@
 }
 
 .logoloop--fade::after {
-  right: 0;
+  inset-inline-end: 0;
   background: linear-gradient(
     to left,
     var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
@@ -130,8 +130,8 @@
 
 .logoloop--vertical.logoloop--fade::before,
 .logoloop--vertical.logoloop--fade::after {
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   width: 100%;
   height: clamp(24px, 8%, 120px);
 }

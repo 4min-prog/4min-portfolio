@@ -45,21 +45,22 @@ const Skills: React.FC<SkillsProps> = ({ t }) => {
           <span>{t.title}</span>
         </div>
         <h2 className="heading-lg mb-6">{t.title}</h2>
-        <p className="text-lg text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
           {t.desc}
         </p>
       </div>
 
-      <LogoLoop
-        logos={allLogos}
-        speed={90}
-        direction="left"
-        logoHeight={56}
-        gap={52}
-        fadeOut
-        scaleOnHover
-        ariaLabel={t.title}
-      />
+      <div dir="ltr">
+        <LogoLoop
+          logos={allLogos}
+          speed={90}
+          direction="left"
+          logoHeight={56}
+          gap={52}
+          scaleOnHover
+          ariaLabel={t.title}
+        />
+      </div>
     </div>
   );
 };

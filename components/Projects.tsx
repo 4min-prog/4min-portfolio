@@ -198,7 +198,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
           <span>{t.title}</span>
         </div>
         <h2 className="heading-lg mb-6">{t.title}</h2>
-        <p className="text-lg text-[#A1A1AA] leading-relaxed max-w-xl mx-auto">
+        <p className="text-lg text-secondary leading-relaxed max-w-xl mx-auto">
           {t.desc}
         </p>
       </div>
@@ -208,7 +208,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
           onClick={() => scrollByStep('left')}
           onMouseEnter={() => { pausedRef.current = true; }}
           onTouchStart={() => { pausedRef.current = true; }}
-          className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-[#121217] border border-[#23232D] text-[#A1A1AA] opacity-100 md:opacity-0 md:group-hover/scroll:opacity-100 transition-all duration-300 hover:border-[#7C3AED] hover:text-white backdrop-blur-sm"
+          className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-surface border border-border text-secondary opacity-100 md:opacity-0 md:group-hover/scroll:opacity-100 transition-all duration-300 hover:border-accent hover:text-white backdrop-blur-sm"
           aria-label="Previous projects"
         >
           <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
@@ -217,7 +217,7 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
           onClick={() => scrollByStep('right')}
           onMouseEnter={() => { pausedRef.current = true; }}
           onTouchStart={() => { pausedRef.current = true; }}
-          className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-[#121217] border border-[#23232D] text-[#A1A1AA] opacity-100 md:opacity-0 md:group-hover/scroll:opacity-100 transition-all duration-300 hover:border-[#7C3AED] hover:text-white backdrop-blur-sm"
+          className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-surface border border-border text-secondary opacity-100 md:opacity-0 md:group-hover/scroll:opacity-100 transition-all duration-300 hover:border-accent hover:text-white backdrop-blur-sm"
           aria-label="Next projects"
         >
           <ChevronRight className="w-5 h-5 md:w-5 md:h-5" />
@@ -259,23 +259,23 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#09090B]/80 via-[#09090B]/20 to-transparent" />
                 <div className="absolute top-3 left-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#09090B]/60 backdrop-blur-md text-white border border-white/10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-deep/60 backdrop-blur-md text-white border border-white/10">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                     {project.status}
                   </span>
                 </div>
                 <div className="absolute bottom-3 left-3 right-3">
                   <h3 className="text-white font-bold text-sm sm:text-base leading-tight">{project.title}</h3>
-                  <span className="text-[#A1A1AA] text-xs font-medium">{project.category}</span>
+                  <span className="text-secondary text-xs font-medium">{project.category}</span>
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-[#A1A1AA] text-xs sm:text-sm line-clamp-2 leading-relaxed">
+                <p className="text-secondary text-xs sm:text-sm line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {project.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-[#121217] text-[#71717A] border border-[#23232D]">
+                    <span key={tag} className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-surface text-muted border border-border">
                       {tag}
                     </span>
                   ))}

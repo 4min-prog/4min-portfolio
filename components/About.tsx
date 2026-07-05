@@ -40,12 +40,12 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-white font-bold text-xl tracking-tight">4min</p>
-                    <p className="text-[#A1A1AA] text-xs font-bold uppercase tracking-widest">
+                    <p className="text-secondary text-xs font-bold uppercase tracking-widest">
                       {t.badgeTitle} · {t.badgeSubtitle}
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#7C3AED]/10 text-[#8B5CF6] text-xs font-bold rounded-full border border-[#7C3AED]/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent/10 text-[#8B5CF6] text-xs font-bold rounded-full border border-accent/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                     {t.active}
                   </span>
                 </div>
@@ -61,7 +61,7 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
           </div>
           <h2 className="heading-lg mb-8">{t.title}</h2>
           
-          <p className="text-lg text-[#A1A1AA] mb-12 leading-relaxed italic border-l-2 border-[#7C3AED] pl-6 rtl:border-l-0 rtl:border-r-2 rtl:pr-6">
+          <p className="text-lg text-secondary mb-12 leading-relaxed italic border-l-2 border-accent pl-6 rtl:border-l-0 rtl:border-r-2 rtl:pr-6">
             {t.quote}
           </p>
 
@@ -69,23 +69,23 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
             {t.items.map((item: any, idx: number) => (
               <div key={idx} className="premium-card p-6 group">
                 <div className={`flex items-center space-x-3 ${lang === 'ar' ? 'space-x-reverse' : ''} mb-3`}>
-                  <div className="w-10 h-10 rounded-lg bg-[#121217] border border-[#23232D] flex items-center justify-center text-white group-hover:text-[#7C3AED] transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center text-white group-hover:text-accent transition-colors">
                     {icons[idx]}
                   </div>
                   <h4 className="font-bold text-white">{item.t}</h4>
                 </div>
-                <p className="text-[#A1A1AA] text-sm leading-relaxed">
+                <p className="text-secondary text-sm leading-relaxed">
                   {item.d}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 border-t border-[#23232D]">
+          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 border-t border-border">
             {stats.map((stat, idx) => (
               <div key={idx} className="premium-card p-5 text-center hover:scale-[1.02] transition-transform">
                 <p className="text-2xl font-bold text-white">{stat.value}</p>
-                <p className="text-[10px] text-[#71717A] font-bold uppercase tracking-widest leading-tight mt-1">{stat.label}</p>
+                <p className="text-[10px] text-muted font-bold uppercase tracking-widest leading-tight mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
