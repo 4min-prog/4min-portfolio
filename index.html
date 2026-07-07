@@ -10,6 +10,11 @@
   <meta name="keywords" content="4min, 4min dev, web developer, portfolio, react, typescript, tailwind css, ui/ux, seo, freelancer, frontend developer, modern web solutions">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Muhammed Emin Elomer">
+  <meta name="theme-color" content="#0B0B0F">
+  <meta name="application-name" content="4MIN Portfolio">
+  <meta name="apple-mobile-web-app-title" content="4MIN">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <link rel="canonical" href="https://4min.netlify.app/">
 
@@ -38,8 +43,10 @@
   <link rel="alternate" href="https://4min.netlify.app/" hreflang="tr" />
   <link rel="alternate" href="https://4min.netlify.app/" hreflang="ar" />
 
-  <link rel="shortcut icon" href="image/favicon-16x16.png" type="image/x-icon">
-  <script data-goatcounter="https://4min.goatcounter.com/count"
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%237C3AED'>4</text></svg>">
+
+  <script data-goalcounter="https://4min.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,14 +61,43 @@
     "@type": "Person",
     "name": "Muhammed Emin Elomer",
     "alternateName": "4MIN",
+    "givenName": "Muhammed Emin",
+    "familyName": "Elomer",
     "url": "https://4min.netlify.app/",
+    "image": "https://4min.netlify.app/image/og-image.jpg",
     "jobTitle": "Web Developer",
-    "knowsAbout": ["React", "TypeScript", "Tailwind CSS", "UI/UX Design", "SEO Optimization"],
-    "alumniOf": "Siirt University"
+    "description": "Professional web developer crafting modern, high-performance digital experiences with React, TypeScript, UI/UX, and SEO.",
+    "knowsAbout": ["React", "TypeScript", "Tailwind CSS", "UI/UX Design", "SEO Optimization", "JavaScript", "Node.js"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Siirt University"
+    },
+    "sameAs": [
+      "https://github.com/4min-prog",
+      "https://4min.itch.io/",
+      "https://hubfreetools.com/"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "4MIN Portfolio",
+    "alternateName": "4MIN",
+    "url": "https://4min.netlify.app/",
+    "description": "Professional portfolio of Muhammed Emin Elomer (4MIN) — Web Developer specializing in React, TypeScript, UI/UX, and SEO.",
+    "inLanguage": ["en", "tr", "ar"],
+    "author": {
+      "@type": "Person",
+      "name": "Muhammed Emin Elomer"
+    }
   }
   </script>
 </head>
 <body class="bg-[#09090B] text-white transition-colors duration-300">
+  <h1 class="sr-only">4MIN — Modern Web Solutions, React & TypeScript Developer Portfolio</h1>
   <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
 </body>
