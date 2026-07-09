@@ -44,6 +44,7 @@ export const translations = {
         restaurant: 'Restaurant Website',
         fnd: 'FND Software',
         galary: 'Galary',
+        smile4you: 'Dental Clinic',
       },
       projects: {
         games: { title: 'Game Collection', desc: 'A growing collection of fun and addictive browser games published on itch.io.' },
@@ -53,6 +54,7 @@ export const translations = {
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'A modern restaurant website showcasing delicious Adana and Siirt cuisine with an elegant design.' },
         fnd: { title: 'FND Yazılım', desc: 'A modern web design and SEO services website built with React.', status: 'Live' },
         galary: { title: 'Galary', desc: 'Add tag and description to images easily.', status: 'Live' },
+        smile4you: { title: 'Smile 4 You', desc: 'A premium dental clinic website offering implants, whitening, orthodontics and more with a modern, elegant design.', status: 'Live' },
       }
     },
     timeline: {
@@ -168,6 +170,7 @@ export const translations = {
         restaurant: 'Restoran Web Sitesi',
         fnd: 'FND Yazılım',
         galary: 'Galeri',
+        smile4you: 'Diş Kliniği',
       },
       projects: {
         games: { title: 'Oyun Koleksiyonu', desc: 'itch.io üzerinde yayınlanan, giderek büyüyen eğlenceli ve bağımlılık yapan tarayıcı oyunları koleksiyonu.' },
@@ -177,6 +180,7 @@ export const translations = {
         restaurant: { title: 'Adanalı Siirt Restaurant', desc: 'Adana ve Siirt mutfağının lezzetlerini şık bir tasarımla sergileyen modern bir restoran web sitesi.' },
         fnd: { title: 'FND Yazılım', desc: 'React ile oluşturulmuş modern bir web tasarımı ve SEO hizmetleri sitesi.', status: 'Canlı' },
         galary: { title: 'Galeri', desc: 'Görsellere kolayca etiket ve açıklama ekleyin.', status: 'Canlı' },
+        smile4you: { title: 'Smile 4 You', desc: 'İmplant, beyazlatma, ortodonti ve daha fazlasını sunan modern ve şık tasarımlı bir diş kliniği web sitesi.', status: 'Canlı' },
       }
     },
     timeline: {
@@ -292,6 +296,7 @@ export const translations = {
         restaurant: 'موقع مطعم',
         fnd: 'FND للبرمجيات',
         galary: 'المعرض',
+        smile4you: 'عيادة أسنان',
       },
       projects: {
         games: { title: 'مجموعة الألعاب', desc: 'مجموعة متنامية من الألعاب المتصفح الممتعة والمنشورة على itch.io.' },
@@ -301,6 +306,7 @@ export const translations = {
         restaurant: { title: 'مطعم أدنالي سعرد', desc: 'موقع مطعم عصري يعرض أطباق مطبخ أضنة وسعرد اللذيذة بتصميم أنيق.' },
         fnd: { title: 'FND للبرمجيات', desc: 'موقع حديث لخدمات تصميم الويب وتحسين محركات البحث تم بناؤه باستخدام React.', status: 'مباشر' },
         galary: { title: 'المعرض', desc: 'أضف الوسوم والوصف للصور بسهولة.', status: 'مباشر' },
+        smile4you: { title: 'Smile 4 You', desc: 'موقع عيادة أسنان راقي يقدم زراعة الأسنان والتبييض وتقويم الأسنان والمزيد بتصميم عصري وأنيق.', status: 'مباشر' },
       }
     },
     timeline: {

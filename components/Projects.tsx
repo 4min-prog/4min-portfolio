@@ -90,6 +90,16 @@ const Projects: React.FC<ProjectsProps> = ({ t }) => {
       status: 'Live',
       tags: ['React', 'CSS', 'JavaScript', 'SEO'],
     },
+    {
+      key: 'smile4you',
+      title: pt.smile4you?.title || 'Smile 4 You',
+      category: t.cat?.smile4you || 'Dental Clinic',
+      description: pt.smile4you?.desc || 'A premium dental clinic website offering implants, whitening, orthodontics and more with a modern, elegant design.',
+      link: 'https://4smile.vercel.app/',
+      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80',
+      status: 'Live',
+      tags: ['React', 'CSS', 'JavaScript', 'Vite'],
+    },
   ];
 
   const trackRef = useRef<HTMLDivElement>(null);
