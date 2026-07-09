@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
     { name: t.services, id: 'services' },
     { name: t.projects, id: 'projects' },
     { name: t.about, id: 'about' },
-    { name: t.contact, id: 'contact' },
+    { name: t.contact, id: 'contact', url: 'https://4MINlink.vercel.app/' },
   ];
 
   const scrollToSection = (e: React.MouseEvent, id: string) => {
@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
               className="flex items-center group cursor-pointer"
             >
               <span className="font-bold tracking-tighter text-xl text-white">
-                4min
+                4MIN
               </span>
             </button>
           </div>
@@ -161,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
           }
         `}>
           <div className="flex items-center ps-2">
-            <span className="font-bold text-lg tracking-tighter text-white">4min</span>
+            <span className="font-bold text-lg tracking-tighter text-white">4MIN</span>
           </div>
 
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
@@ -185,7 +185,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
           >
             <div className="p-6 flex items-center justify-between border-b border-border">
               <div className="flex items-center">
-                <span className="font-bold text-white text-2xl tracking-tighter">4min</span>
+                <span className="font-bold text-white text-2xl tracking-tighter">4MIN</span>
               </div>
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
                 <button
@@ -201,7 +201,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
               {navLinks.filter(link => link.id !== 'contact').map((link) => (
                 <button
                   key={link.id}
-                  onClick={(e) => scrollToSection(e, link.id)}
+                onClick={(e) => link.url ? window.open(link.url, '_blank', 'noopener,noreferrer') : scrollToSection(e, link.id)}
                   className={`w-full text-start py-4 text-3xl font-bold transition-colors ${
                     activeId === link.id ? 'text-white' : 'text-muted hover:text-white'
                   }`}
@@ -211,12 +211,14 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t, scrollProgress }) 
               ))}
               
               <div className="mt-auto pt-6">
-                <button
-                  onClick={(e) => scrollToSection(e, 'contact')}
-                  className="w-full py-6 rounded-[1.5rem] text-white text-2xl font-bold border border-border bg-surface hover:border-accent transition-all active:scale-95"
+                <a
+                  href="https://4MINlink.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-6 rounded-[1.5rem] text-white text-2xl font-bold border border-border bg-surface hover:border-accent transition-all active:scale-95 text-center"
                 >
                   {t.contact}
-                </button>
+                </a>
               </div>
             </div>
 

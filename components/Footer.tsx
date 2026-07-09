@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ t, lang }) => {
               onClick={(e) => scrollToSection(e, 'home')}
               className="text-3xl font-bold text-white tracking-tighter mb-6 block w-full md:w-auto"
             >
-              4min
+              4MIN
             </button>
             <p className="text-muted leading-relaxed mb-8 text-sm">
               {t.desc}

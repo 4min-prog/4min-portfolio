@@ -3,14 +3,14 @@ export type Language = 'en' | 'tr' | 'ar';
 
 export const translations = {
   en: {
-    nav: { home: 'Home', skills: 'Skills', timeline: 'Journey', services: 'Services', projects: 'Projects', about: 'About', contact: 'Contact', language: 'Language', toggleDark: 'Toggle Dark Mode' },
+    nav: { home: 'Home', skills: 'Skills', timeline: 'Journey', services: 'Services', projects: 'Projects', about: 'About', contact: 'Digital Card', language: 'Language', toggleDark: 'Toggle Dark Mode' },
     hero: {
       student: 'Web Developer',
       title: 'Crafting The Future',
       roles: ['Web Developer', 'UI/UX Enthusiast', 'Creative Builder'],
       desc: 'I am a dedicated web developer crafting modern, high-performance digital experiences.',
       explore: 'Explore Projects',
-      touch: 'Get In Touch',
+      touch: 'My Digital Card',
       downloadCV: 'View CV'
     },
     skills: {
@@ -129,14 +129,14 @@ export const translations = {
     preloader: { loading: 'Loading Excellence' }
   },
   tr: {
-    nav: { home: 'Ana Sayfa', skills: 'Yetenekler', timeline: 'Yolculuğum', services: 'Hizmetler', projects: 'Projeler', about: 'Hakkımda', contact: 'İletişim', language: 'Dil', toggleDark: 'Karanlık Modu Aç/Kapat' },
+    nav: { home: 'Ana Sayfa', skills: 'Yetenekler', timeline: 'Yolculuğum', services: 'Hizmetler', projects: 'Projeler', about: 'Hakkımda', contact: 'Dijital Kartvizitim', language: 'Dil', toggleDark: 'Karanlık Modu Aç/Kapat' },
     hero: {
       student: 'Web Geliştirici',
       title: 'Geleceği İnşa Ediyorum',
       roles: ['Web Geliştirici', 'UI/UX Meraklısı', 'Yaratıcı Oluşturucu'],
       desc: 'Modern, yüksek performanslı dijital deneyimler oluşturan kendini işine adamış bir web geliştiriciyim.',
       explore: 'Projeleri Keşfet',
-      touch: 'İletişime Geç',
+      touch: 'Dijital Kartvizitim',
       downloadCV: 'CV Görüntüle'
     },
     skills: {
@@ -255,14 +255,14 @@ export const translations = {
     preloader: { loading: 'Mükemmellik Yükleniyor' }
   },
   ar: {
-    nav: { home: 'الرئيسية', skills: 'المهارات', timeline: 'رحلتي', services: 'الخدمات', projects: 'المشاريع', about: 'حول', contact: 'اتصل بنا', language: 'اللغة', toggleDark: 'تبديل الوضع الداكن' },
+    nav: { home: 'الرئيسية', skills: 'المهارات', timeline: 'رحلتي', services: 'الخدمات', projects: 'المشاريع', about: 'حول', contact: 'بطاقتي الرقمية', language: 'اللغة', toggleDark: 'تبديل الوضع الداكن' },
     hero: {
       student: 'مطور ويب',
       title: 'صناعة المستقبل',
       roles: ['مطور ويب', 'محب لتجربة المستخدم', 'مبدع'],
       desc: 'أنا مطور ويب مكرس أصنع تجارب رقمية حديثة وعالية الأداء.',
       explore: 'استكشاف المشاريع',
-      touch: 'تواصل معي',
+      touch: 'بطاقتي الرقمية',
       downloadCV: 'عرض السيرة الذاتية'
     },
     skills: {

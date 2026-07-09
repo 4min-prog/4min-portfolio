@@ -104,12 +104,14 @@ const Hero: React.FC<HeroProps> = ({ t, cvT, lang }) => {
               <FileDown className="w-5 h-5" /> {t.downloadCV || 'Download CV'}
             </button>
 
-            <button 
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className="btn-secondary"
+            <a 
+              href="https://4minlink.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex items-center gap-2"
             >
               {t.touch}
-            </button>
+            </a>
           </div>
         </div>
       </div>

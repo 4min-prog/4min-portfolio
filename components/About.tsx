@@ -39,7 +39,7 @@ const About: React.FC<AboutProps> = ({ t, lang }) => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#09090B]/90 to-transparent p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-white font-bold text-xl tracking-tight">4min</p>
+                    <p className="text-white font-bold text-xl tracking-tight">4MIN</p>
                     <p className="text-secondary text-xs font-bold uppercase tracking-widest">
                       {t.badgeTitle} · {t.badgeSubtitle}
                     </p>
